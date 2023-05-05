@@ -14,6 +14,11 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
 Milestone 3 (BONUS)
 Invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION recupererà la password da mostrare all’utente.
 */
+
+
+$numOfCaracthers= $_GET['pswnum'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -40,11 +45,11 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 <main class="d-flex justify-content-center">
     <div class="_mycontainer">
 
-        <form action="<?php echo $_SERVER['PHP_SELF']?>">
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="GET">
 
             <div>
-                <p>Inserisci il numero di caratteri:</p>
-                <input type="number" class="form-control" placeholder="Min 8 - Max 32" min="8" max="32" required>
+                <p class="fw-semibold">Inserisci il numero di caratteri:</p>
+                <input type="number" class="form-control" placeholder="Min 8 - Max 32" min="8" max="32" required name="pswnum">
             </div>
 
             <div class="py-3">
