@@ -25,29 +25,39 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
     <title>PHP|Secure PSW gen</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- my CSS -->
+    <link rel="stylesheet" href="./CSS/master.css">
 </head>
 <body>
 
 <header>
-    <h1>Crea la tua password</h1>
-    <p>in modo semplice e veloce!</p>
+    <div class="container text-center">
+       <h1>Crea la tua password</h1>
+        <p>in modo semplice e veloce!</p> 
+    </div>
 </header>
 
-<main>
-    <div>
+<main class="d-flex justify-content-center">
+    <div class="_mycontainer">
 
-        <form class="row g-3" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+        <form action="<?php echo $_SERVER['PHP_SELF']?>">
 
-        
+            <div>
+                <p>Inserisci il numero di caratteri:</p>
+                <input type="number" class="form-control" placeholder="Min 8 - Max 32" min="8" max="32" required>
+            </div>
 
-            <button type="submit" class="btn btn-outline-success">Genera</button>
-
+            <div class="py-3">
+                <button type="submit" class="btn btn-outline-warning">Submit</button>
+            </div>
 
         </form>
-
     </div>
-
 </main>
+
+<footer>
+    
+</footer>
     
 </body>
 </html>
