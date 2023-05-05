@@ -16,7 +16,11 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 */
 
 
-$numOfCaracthers= $_GET['pswnum'];
+if(isset($_GET['pswnum'])){
+    $numOfCaracthers=$_GET['pswnum'];
+    echo $numOfCaracthers;
+    //chiamo la funzione qua e gli passo il numero!
+}
 
 
 ?>
