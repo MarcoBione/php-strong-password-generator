@@ -14,31 +14,6 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
 Milestone 3 (BONUS)
 Invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION recupererà la password da mostrare all’utente.
 */
-$psw = 'la tua password sarà qui';
-
-if(isset($_GET['pswnum'])){
-
-    $max = 32;
-    $min = 8;
-
-    //check if number is alterated
-    if($_GET['pswnum'] <= $max && $_GET['pswnum'] >= $min ){
-       
-        $numOfCaracthers=$_GET['pswnum'];
-        $psw = genPassword($numOfCaracthers);
-    }else{
-        $psw='qualcosa è andato storto';
-    }
-}
-
-//PSW Generator
-function genPassword ($numOfCaracthers){
-    //echo $numOfCaracthers;
-    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#!"$%&/=^'; //character aviable
-    $password = substr(str_shuffle($chars), 0, $numOfCaracthers); //sorting n° characters from string randomly
-    return $password; //return password from function call
-}
-
 ?>
 
 <!-- base html template -->
@@ -54,8 +29,8 @@ include __DIR__ . '/template.php';
 
             <header class="p-4">
                 <div>
-                   <h2 class="_mytxt">PSW.</h2>
-                    <h2 class="_mytxt">GEN.rator  -V1</h2>
+                   <h2 class="_mytxt">PSW.GEN</h2>
+                    <h2 class="_mytxt">Ver - 1.1.3</h2>
                 </div>
             </header>
 
@@ -63,7 +38,7 @@ include __DIR__ . '/template.php';
 
                 <div class="_mycontainer mb-5">
 
-                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="GET">
+                    <form action="passwordpage.php" method="GET">
 
                         <div>
                             <p class="fw-semibold">Inserisci il numero di caratteri:</p>
@@ -77,15 +52,9 @@ include __DIR__ . '/template.php';
                     </form>
                 </div>
 
-                <div>
-                    <div class="_mypassword">
-                        <p class="m-0"><?php echo $psw ?></p>
-                    </div>
-                </div>
-
             </main>
 
-            <footer class="d-flex align-items-center p-4">
+            <footer class="d-flex align-items-end p-4">
                 <h5 class="text-white-50 m-0 fs-6">Powered by PHP | Developed with &hearts; by Marco</h5>
             </footer>
         </div>
