@@ -11,7 +11,7 @@ if($_GET['pswnum'] <= $max && $_GET['pswnum'] >= $min ){
     $psw = genPassword($numOfCaracthers);
     //echo 'sono qua';
 }else{
-    $psw='qualcosa è andato storto';
+    $psw='Ti ho beccato.. hai provto a fare il furbetto';
     //echo 'sono qua 2';
 }
 }
