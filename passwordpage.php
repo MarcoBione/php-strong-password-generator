@@ -13,8 +13,8 @@ include './template.php';
 
             <header class="p-4">
                 <div>
-                   <h2 class="_mytxt">PSW.</h2>
-                    <h2 class="_mytxt">GEN.rator  -V1</h2>
+                    <h2 class="_mytxt">PSW.GEN</h2>
+                    <h2 class="_mytxt">Ver - 1.1.3</h2>
                 </div>
             </header>
 
@@ -38,7 +38,7 @@ include './template.php';
             
             </main>
 
-            <footer class="d-flex align-items-center p-4">
+            <footer class="d-flex align-items-end p-4">
                 <h5 class="text-white-50 m-0 fs-6">Powered by PHP | Developed with &hearts; by Marco</h5>
             </footer>
         </div>
